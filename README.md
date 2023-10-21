@@ -1,5 +1,7 @@
 ## smiles-lambda-partners-promotions
 
+Projeto feito usando clean architecture, DDD, SOLID e clean code.
+
 # RFs (Requisitos Funcionais)
 Contexto de Campanha e Promoção
 - [ ] Deve ser possível realizar a pesquisa de promoções/campanhas ativas e inativas
