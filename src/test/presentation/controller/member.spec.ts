@@ -26,7 +26,7 @@ describe('MemberController siebel repository', () => {
     expect(response.data.error).toBeInstanceOf(MemberError);
   });
 
-  test('should return 400 with MissingParamError if partnerAlias is missing', async () => {
+  test('should return 400 with MemberError if cpf is missing', async () => {
     const mockRepositorymock = new mockRepositorySiebel();
     const mockUseCase = new getMemberService(mockRepositorymock);
     const controller = new MemberController(mockUseCase);
@@ -38,7 +38,7 @@ describe('MemberController siebel repository', () => {
     expect(response.data.error).toBeInstanceOf(MemberError);
   });
 
-  test('should return 200 with promotions if partnerAlias is provided', async () => {
+  test('should return 200 with member if cpf is provided', async () => {
     const mockRepositorymock = new mockRepositorySiebel();
     const mockUseCase = new getMemberService(mockRepositorymock);
     const controller = new MemberController(mockUseCase);
