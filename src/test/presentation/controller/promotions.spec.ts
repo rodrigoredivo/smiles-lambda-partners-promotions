@@ -1,11 +1,11 @@
 import { describe, expect, test, vitest } from 'vitest'
-import { PromotionsController } from './promotions';
-import { MissingParamError } from '../../domain/errors/missing-param-error';
-import GetPromotionsService from '../../data/services/get-promotions';
-import Promotion from '../../domain/entity/promotion';
-import { GetPromotionsSiebelRepository } from '../../infra/repositories/get-promotions-siebel'
-import { siebelPromotions, promotionsOracle } from '../../infra/data-sources/promotions';
-import { GetPromotionsOracleRepository } from '../../infra/repositories/get-promotions-oracle';
+import { PromotionsController } from '../../../presentation/controllers/promotions';
+import { MissingParamError } from '../../../domain/errors/missing-param-error';
+import GetPromotionsService from '../../../data/services/get-promotions';
+import Promotion from '../../../domain/entity/promotion';
+import { GetPromotionsSiebelRepository } from '../../../infra/repositories/get-promotions-siebel'
+import { siebelPromotions, promotionsOracle } from '../../../infra/data-sources/promotions';
+import { GetPromotionsOracleRepository } from '../../../infra/repositories/get-promotions-oracle';
 
 export class mockRepositorySiebel implements GetPromotionsSiebelRepository {
     async searchActiveAndInactive(partnerAlias: string): Promise<Promotion[]> {
